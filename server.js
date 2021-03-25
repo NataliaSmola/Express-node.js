@@ -16,11 +16,7 @@ app.use('/user', (req, res, next) => {
   res.show('/warning.html');
 });
 
-app.get('/' , (req, res) => {
-  res.show('index.html');
-});
-
-app.get('/home', (req, res) => {
+app.get(['/', '/home'] , (req, res) => {
   res.show('index.html');
 });
 
